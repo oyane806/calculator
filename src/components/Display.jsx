@@ -5,14 +5,15 @@ export default class Display extends React.Component {
         const itemClicked = e.target.name;
         this.props.display(itemClicked);
     }
-    calculate = (e) => {
-    	const result = eval(this.props.view);
-    	console.log(result);
-    	this.props.calculate(result);
-    }
     render() {
         return (
         <div>
+        <div>
+        <button name="AC" onClick={this.props.clear}> AC </button>
+ 		<button name="-" onClick={this.display}>+/-</button>
+ 		<button name="/100" onClick={this.display}>%</button>
+ 		<button name="/" onClick={this.display}>/</button>
+        </div>
         <div>
  		<button name="7" onClick={this.display}> 7 </button>
  		<button name="8" onClick={this.display}>8</button>
@@ -33,7 +34,7 @@ export default class Display extends React.Component {
  		</div>
  		<button name="0" onClick={this.display}>0</button>
  		<button name="." onClick={this.display}>.</button>
- 		<button name="=" onClick={this.calculate}>=</button>
+ 		<button name="=" onClick={this.props.equal}>=</button>
  		</div>
         );
     }

@@ -12,10 +12,16 @@ export default class CalculatorApp extends React.Component {
             view: prevState.view.concat("", itemClicked)
         }));
     };
-    calculate = (resultCalculated) => {
-        this.setState(() => ({
-            result: resultCalculated
-        }));
+    clear = () => {
+    	this.setState(() => ({
+    		view: "",
+    		result: ""
+    	}));
+    };
+    equal = () => {
+    	this.setState(() => ({
+    		result: eval(this.state.view)
+    	}));
     };
 
     render() {
@@ -28,8 +34,9 @@ export default class CalculatorApp extends React.Component {
 			<Display
 			display={this.display}
 			result={this.state.result}
-			calculate={this.calculate}
-			view={this.state.view} 
+			equal={this.equal}
+			view={this.state.view}
+			clear={this.clear}
 			/>
 			</div>
         );
