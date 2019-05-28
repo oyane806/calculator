@@ -26,7 +26,7 @@ export default class CalculatorApp extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
 			<Result 
 			result={this.state.view}
 			calculated={this.state.result}

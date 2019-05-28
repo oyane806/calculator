@@ -1,9 +1,10 @@
 import React from "react";
 
 const Result = (props) => (
-	<div>
-		<p>{props.result}</p>
-		<span>{props.calculated}</span>
+	<div className="result__display">
+		<p className="result">{props.result}
+		<span className="result__calculated">{props.calculated}</span>
+		</p>
 	</div>
 );
 

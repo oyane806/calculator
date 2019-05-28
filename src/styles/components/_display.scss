@@ -1,0 +1,17 @@
+button {
+	background-color: white;
+	padding: 1rem 1rem;
+	border: none;
+	height: 4rem;
+	width: 4rem;
+}
+
+.button-row {
+	display: flex;
+	justify-content: space-around;
+}
+
+.empty {
+	height: 4rem;
+	width:4rem;
+}

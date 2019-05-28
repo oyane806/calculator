@@ -1,0 +1,14 @@
+.result {
+	padding: 1.6rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.result__calculated {
+	color: pink;
+}
+
+.result__display {
+	height: 5rem;
+	background-color: $light-grey;
+}
